@@ -29,6 +29,9 @@ public class KorekApi {
     
     public boolean take(int m,int n){
         boolean result=false;
+        if (n<1 || m<1 || m>this.state.length-1){
+            return result;
+        }
         try{
             int temp=this.state[m];
             this.state[m]-=n;

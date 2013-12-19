@@ -27,13 +27,13 @@ public class MiniMax {
             int[] currentState = (int[]) it.next();
             it.remove();
             double[] currentMinMax = this.min(currentState);
-            System.out.println(String.format("%s : %f - %f", this.getString(currentState),currentMinMax[0],currentMinMax[1]));
+//            System.out.println(String.format("%s : %f - %f", this.getString(currentState),currentMinMax[0],currentMinMax[1]));
             if (currentMinMax[0] > selectedMinMax[0] || (currentMinMax[0] == selectedMinMax[0] && currentMinMax[1] >= selectedMinMax[1])) {
                 selectedMinMax = currentMinMax;
                 selectedState = currentState;
             }
         }
-        System.out.println(this.getString(selectedState));
+//        System.out.println(this.getString(selectedState));
         return this.getDraw(state, selectedState);
     }
 
