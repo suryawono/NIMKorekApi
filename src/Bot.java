@@ -26,7 +26,7 @@ public class Bot  extends Player{
     }
     
     public void move(){
-        int[] draw=mm.max(this.ka.getState());
+        int[] draw=mm.getDraw(this.ka.getState());
         take(draw[0],draw[1]);
     }
 

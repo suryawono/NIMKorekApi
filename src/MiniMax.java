@@ -34,7 +34,7 @@ public class MiniMax {
             }
         }
 //        System.out.println(this.getString(selectedState));
-        return this.getDraw(state, selectedState);
+        return selectedState;
     }
 
     /*
@@ -97,8 +97,9 @@ public class MiniMax {
         return stateChance;
     }
 
-    public int[] getDraw(int[] state, int[] toState) {
+    public int[] getDraw(int[] state) {
         int[] draw = new int[2];
+        int[] toState=this.max(state);
         for (int i = 0; i < state.length; i++) {
             if (state[i] != toState[i]) {
                 draw[0] = i;
